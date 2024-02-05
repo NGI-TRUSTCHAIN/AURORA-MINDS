@@ -7,4 +7,4 @@ The project benefits various stakeholders, including children, parents, educator
 - Parents receive reassurance regarding data confidentiality, gaining insights into ADHD risk assessment and relevant information to provide better support. 
 - Clinicians benefit from enhanced diagnosis capabilities, aided by qualitative and quantitative measurements. Access rights are carefully managed using the Privacy-ABCs (Privacy-Attribute-Based Credentials) approach, ensuring that each entity—child, parent, and clinician—receives appropriate access privileges.
 By incorporating this proposal into the **TRUSTCHAIN** framework, **AURORA MINDS** elevates TRUSTCHAIN's reputation by exemplifying a steadfast commitment to data privacy and security. The emphasis on PETs and federated machine learning not only bolsters data privacy but also mitigates legal risks associated with data sharing, enhancing data quality for effective decision-making.
-[Drupal](https://github.com/NGI-TRUSTCHAIN/AURORA-MINDS/issues/1#issue-2118627000)
+  [AURORA-MINDS](https://github.com/NGI-TRUSTCHAIN/AURORA-MINDS/issues/1#issue-2118627000)
