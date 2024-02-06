@@ -43,6 +43,7 @@ Possible integration with OC1 projects:
 - ConInSe, an innovative framework designed for privacy-centric data management. Built on Event-Driven Architecture (EDA) and Domain-Driven Design (DDD) principles provide to users a robust and scalable approach to managing consent in a distributed and asynchronous manner.
 - CreatorCredentials project is dedicated to developing a user-centric digital identity management framework.
 - DidRoom, an open-source multiplatform and multifunctional Identity DID/SSI wallet, compliant with the W3C-DID and W3C-VC standards and with the current “The European Digital Identity Wallet Architecture and Reference Framework” (EUDI – ARF, version 1.0.0 from January 2023) which is the technical core of the eIDAS 2.0 regulation.
+  
 Possible integration with OC2 projects:
 - ProvenAI (Provenance in AI) could be integrating into our project enhancing data governance and privacy by ensuring traceability and accountability for every piece of information used within our system, aligning seamlessly with our commitment to ethical AI development and user empowerment.
 - GUEDHS (Data Governance and User privacy envisioning an EHDS pilot deployment) project focuses on securely sharing and reusing health data while respecting privacy and enforcing data control. Leveraging federated learning and cybersecurity tools, GUEDHS facilitates fast deployment of a Federated Network, enabling data custodians to manage permissions and monitor data usage for respiratory infections research.
