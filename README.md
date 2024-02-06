@@ -5,8 +5,9 @@ AURORA MINDS represents a groundbreaking initiative, started from 15th of Januar
 The project leverages machine learning techniques such as federated learning and local differential privacy to protect sensitive user data during collection and analysis, aligning with GDPR requirements. Data will be pseudonymized and encrypted during storage and transfer. Consent mechanisms and access controls will be implemented to ensure data protection and privacy.
  <h2>The project</h2>
 AURORA MINDS adopts a human-centric design approach, tailoring personal data collection from a child while s/he interacts with a serious tablet animation game to cater a unique ADHD risk assessment process.
-The project benefits various stakeholders, including children, parents, educators, and clinicians. Children are examined through a specialized application supporting their behavioral unique requirements and independence. 
+The project benefits various stakeholders, including children, parents, educators, and clinicians.
 
+- Children are examined through a specialized application supporting their behavioral unique requirements and independence. 
 - Parents receive reassurance regarding data confidentiality, gaining insights into ADHD risk assessment and relevant information to provide better support.
 - Clinicians benefit from enhanced diagnosis capabilities, aided by qualitative and quantitative measurements.
 - Collaboration with educational institutions to enhance support for children with ADHD. Schools can use the project's assessments to better understand students' needs and tailor educational plans accordingly.
