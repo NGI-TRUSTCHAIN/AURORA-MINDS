@@ -50,4 +50,4 @@ Possible integration with OC2 projects:
 
 
 
-  [AURORA-MINDS](https://github.com/NGI-TRUSTCHAIN/AURORA-MINDS/issues/1#issue-2118627000)
+  ![image](https://github.com/NGI-TRUSTCHAIN/AURORA-MINDS/issues/1#issue-2118627000)
