@@ -67,8 +67,6 @@ If you have any questions, please feel free to reach out:
 
 <hr> 
 
-![image](https://github.com/NGI-TRUSTCHAIN/AURORA-MINDS/assets/39150377/585fc17f-3276-491f-b415-7d551b2559d1)
-
 Aurora Minds Project has received funding from the Open Call #2 of TrustChain project: https://trustchain.ngi.eu/trustchain-open-call-2-results-funding-15-new-projects-to-build-the-next-generation-internet/ 
  
  
