@@ -1,10 +1,48 @@
 # AURORA-MINDS
-**Aurora Minds** represents a groundbreaking initiative aimed at addressing the need to early and accurately diagnose _ADHD_ in children, while prioritizing data privacy and security. In a landscape crowded with assistive technologies for _ADHD_, this project distinguishes itself by integrating robust privacy measures at its core. Existing _ADHD_ assistive technologies often overlook privacy and security concerns, leaving users vulnerable to data risks and profiling. To counter these challenges, AURORA MINDS implements a multi-layered security framework, including **Identity Management (IdM)** and **Privacy-Enhancing Technologies (PETs)**. This approach enhances data security, strictly controls access to sensitive information, and ensures compliance with data privacy regulations.
+**Aurora Minds** represents a groundbreaking initiative aimed at addressing the need to early and accurately diagnose _ADHD_ in children, aiming to improve the socio-economic landscape by enabling better education and support for children with ADHD, ultimately enhancing their life prospects, while prioritizing data privacy and security. In a landscape crowded with assistive technologies for _ADHD_, this project distinguishes itself by integrating robust privacy measures at its core. Existing _ADHD_ assistive technologies often overlook privacy and security concerns, leaving users vulnerable to data risks and profiling. To counter these challenges, AURORA MINDS implements a multi-layered security framework, including **Identity Management (IdM)** and **Privacy-Enhancing Technologies (PETs)**. This approach enhances data security, strictly controls access to sensitive information, and ensures compliance with data privacy regulations.
 
-- The project leverages machine learning techniques such as federated learning and local differential privacy to protect sensitive user data during collection and analysis, aligning with GDPR requirements. 
+- The project leverages machine learning techniques such as federated learning and local differential privacy to protect sensitive user data during collection and analysis, aligning with GDPR requirements. Data will be pseudonymized and encrypted during storage and transfer. Consent mechanisms and access controls will be implemented to ensure data protection and privacy.
+ 
 **Aurora Minds** adopts a human-centric design approach, tailoring personal data collection from a child while s/he interacts with a serious tablet animation game to cater a unique ADHD risk assessment process.
 The project benefits various stakeholders, including children, parents, educators, and clinicians. Children are examined through a specialized application supporting their behavioral unique requirements and independence. 
 - Parents receive reassurance regarding data confidentiality, gaining insights into ADHD risk assessment and relevant information to provide better support. 
-- Clinicians benefit from enhanced diagnosis capabilities, aided by qualitative and quantitative measurements. Access rights are carefully managed using the Privacy-ABCs (Privacy-Attribute-Based Credentials) approach, ensuring that each entity—child, parent, and clinician—receives appropriate access privileges.
+- Clinicians benefit from enhanced diagnosis capabilities, aided by qualitative and quantitative measurements.
+- Collaboration with educational institutions to enhance support for children with ADHD. Schools can use the project's assessments to better understand students' needs and tailor educational plans accordingly.
+
+Access rights are carefully managed using the Privacy-ABCs (Privacy-Attribute-Based Credentials) approach, ensuring that each entity—child, parent, and clinician—receives appropriate access privileges.
 By incorporating this proposal into the **TRUSTCHAIN** framework, **AURORA MINDS** elevates TRUSTCHAIN's reputation by exemplifying a steadfast commitment to data privacy and security. The emphasis on PETs and federated machine learning not only bolsters data privacy but also mitigates legal risks associated with data sharing, enhancing data quality for effective decision-making.
+The main functionalities of the AURORA MINDS ecosystem include the following:
+
+**Wallet  Application**
+- Credential Storage: Stores issued credentials securely.
+- Interactions: Facilitates interactions with the Behavioral Machine Learning Backend server.
+- Privacy-ABCs Management: Issues and verifies Privacy-Attribute-Based Credentials (Attribute Based Credentials) to users.
+- Compliance: Aligns with W3C-DID, W3C-VC standards, and European digital identity regulations.
+- Data Security: Ensures credentials are securely stored and transmitted.
+
+**ADHD Diagnosis**
+- Credential Issuing: Serves as the primary issuer of credentials.
+- Parameter Storage: Stores system parameters in a public repository for accessibility.
+- Federated Learning: Decentralizes the personal data required for machine learning and establishes a connection for federated learning between the device and server
+- Privacy-ABCs: Supports the issuance of Privacy-Attribute-Based Credentials (Attribute Based Credentials).
+
+**Databases**
+- Data Storage: Stores children's collected data in encrypted form.Integration: Architecture informed by ConInSe principles for privacy-centric data management.
+- Secure Recording: Utilizes Distributed Ledger Technologies (DLT) for secure and immutable record-keeping.
+![image](https://github.com/NGI-TRUSTCHAIN/AURORA-MINDS/assets/39150377/307b2d76-1d08-4aa0-a5eb-2ed1676f3498)
+
+
+
+
+
+
+
+Possible integration with OC1 projects:
+- ConInSe, an innovative framework designed for privacy-centric data management. Built on Event-Driven Architecture (EDA) and Domain-Driven Design (DDD) principles provide to users a robust and scalable approach to managing consent in a distributed and asynchronous manner.
+- CreatorCredentials project is dedicated to developing a user-centric digital identity management framework.
+- DidRoom, an open-source multiplatform and multifunctional Identity DID/SSI wallet, compliant with the W3C-DID and W3C-VC standards and with the current “The European Digital Identity Wallet Architecture and Reference Framework” (EUDI – ARF, version 1.0.0 from January 2023) which is the technical core of the eIDAS 2.0 regulation.
+Possible integration with OC2 projects:
+- ProvenAI/Provenance in AI could be integrating into our project enhancing data governance and privacy by ensuring traceability and accountability for every piece of information used within our system, aligning seamlessly with our commitment to ethical AI development and user empowerment.
+
+
   [AURORA-MINDS](https://github.com/NGI-TRUSTCHAIN/AURORA-MINDS/issues/1#issue-2118627000)
