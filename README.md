@@ -6,15 +6,15 @@ The project leverages machine learning techniques such as federated learning and
  <h2>The project</h2>
 AURORA MINDS adopts a human-centric design approach, tailoring personal data collection from a child while s/he interacts with a serious tablet animation game to cater a unique ADHD risk assessment process.
 The project benefits various stakeholders, including children, parents, educators, and clinicians. Children are examined through a specialized application supporting their behavioral unique requirements and independence. 
-- Parents receive reassurance regarding data confidentiality, gaining insights into ADHD risk assessment and relevant information to provide better support. 
+
+- Parents receive reassurance regarding data confidentiality, gaining insights into ADHD risk assessment and relevant information to provide better support.
 - Clinicians benefit from enhanced diagnosis capabilities, aided by qualitative and quantitative measurements.
 - Collaboration with educational institutions to enhance support for children with ADHD. Schools can use the project's assessments to better understand students' needs and tailor educational plans accordingly.
 
 The system allows parents to register their child with ADHD by completing a questionnaire on behavior, education, and medical history. After registration, parents gain access to the Behavior Application, which collects behavioral data from children's interactions with ADHD-specific applications. This data is securely transferred to the Machine Learning Backend Server for analysis, with insights provided to clinicians via the Behavioral Party. Clinicians access relevant information for diagnosis and treatment planning. The server stores processed data securely, and users can request Attribute-Based Credentials for access. Access control is managed by the Behavioral Party, with tailored access for children, parents, and clinicians. An Application Portal offers information and links to system components, while a Virtual Identity Provider enables credential management and verification tokens issuance. The overall architecture of our system is illustrated below:
 
-![image](https://github.com/NGI-TRUSTCHAIN/AURORA-MINDS/assets/39150377/0e884926-fb85-48ea-8591-f2932b276ed0).
+![image](https://github.com/NGI-TRUSTCHAIN/AURORA-MINDS/assets/39150377/0845264d-862c-4d7f-83fb-676cb6c6c6ea)
 
-![image](https://github.com/NGI-TRUSTCHAIN/AURORA-MINDS/issues/1#issue-2118627000)
 
 Access rights are carefully managed using the Privacy-ABCs (Privacy-Attribute-Based Credentials) approach, ensuring that each entity—child, parent, and clinician—receives appropriate access privileges.
 By incorporating this proposal into the **TRUSTCHAIN** framework, **AURORA MINDS** elevates TRUSTCHAIN's reputation by exemplifying a steadfast commitment to data privacy and security. The emphasis on PETs and federated machine learning not only bolsters data privacy but also mitigates legal risks associated with data sharing, enhancing data quality for effective decision-making.
