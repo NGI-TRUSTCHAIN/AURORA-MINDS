@@ -35,6 +35,8 @@ In a potential demonstration scenario for Aurora Minds, a child with suspected A
 4.  Compliance with Regulations: Adoption of Privacy-Enhancing Technologies ensures adherence to data privacy regulations, bolstering trust and confidence among users and stakeholders.
     
 5.  Empowerment of Users: By providing accessible and reliable tools for ADHD diagnosis and management, the project empowers individuals and families affected by the condition, enhancing their ability to navigate and understand ADHD-related challenges.
+#### Backend
+192.168.3.60:10000
 ### Repositories & Documentation
 https://github.com/ioannispanges/Cybersec4europe_IDM
 ## MORE DETAILS
