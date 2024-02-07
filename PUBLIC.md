@@ -77,6 +77,32 @@ In an extra scenario, a Municipality social care directive utilizes Aurora Minds
 The human-centric approach of Aurora Minds places the needs and experiences of children with ADHD at the forefront of its design and implementation. Recognizing the unique challenges and preferences of this demographic, the platform prioritizes usability, accessibility, and engagement. By tailoring the APSOU GAME and web application to the cognitive and behavioral profiles of children with ADHD, Aurora Minds ensures that the user experience is intuitive, engaging, and supportive. Moreover, the platform fosters collaboration and communication among parents, educators, clinicians, and other stakeholders, promoting a holistic and coordinated approach to ADHD diagnosis and management. Through continuous feedback and iterative design processes, Aurora Minds remains responsive to the evolving needs and preferences of its users, ultimately enhancing the quality of life for children with ADHD and their families.
 ## TEAM
 ### Contributors
+ ![image](https://github.com/NGI-TRUSTCHAIN/AURORA-MINDS/assets/39150377/e281409f-6ce5-4acd-944e-0dcb8580d5c3)
+
+1. Anastasios Manos, CEO DOTSOFT, ICT background
+
+
+![image](https://github.com/NGI-TRUSTCHAIN/AURORA-MINDS/assets/39150377/764e73fc-0b48-466c-bf08-0f882c250f1b) 
+
+2. Despina Elisabeth Filippidou, PMO/R&D DOTSOFT
+
+![image](https://github.com/NGI-TRUSTCHAIN/AURORA-MINDS/assets/39150377/1185330b-2ae5-4a2b-b55a-35f0f70a55cf)
+
+3.Vasiliki Liagkou, Assistant Professor / Security & Privacy Senior ICT Manager
+
+![image](https://github.com/NGI-TRUSTCHAIN/AURORA-MINDS/assets/39150377/9fe05038-3520-4a40-9d00-d210c8cd07b8)
+
+4. Sofia Sakka, PhD candidate in Security & Privacy, Researcher
+
+![image](https://github.com/NGI-TRUSTCHAIN/AURORA-MINDS/assets/39150377/ce89f7e5-390c-4993-9a5c-0f88bbe59e40)
+
+5. Dimitris Salmas, Senior Software engineering, Researcher
+
+![image](https://github.com/NGI-TRUSTCHAIN/AURORA-MINDS/assets/39150377/301ca815-ba5e-40c3-a987-154c39e49f6f)
+
+6. Panagiotis Hadjidoukas, Associate Professor/ AI & High-Performance Computing Senior ICT Manager
+
+
 ### Entities
 #### Entity 1 name
 
