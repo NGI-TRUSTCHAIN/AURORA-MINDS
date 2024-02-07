@@ -81,18 +81,17 @@ DOTSOFT is a fast-growing Greek/European SME providing Information and Communica
 UoI is a large Higher Education Institution and a self-governing body supervised by the Ministry of Education. The Laboratory of Knowledge & Intelligent Computing (KIC-Lab), at the Department of Informatics & Telecommunications of the University of Ioannina is involved in various research areas, R&D activities and expertise are Implementation of cybersecurity, machine learning and data analysis.
 
 ### Contributors
- ![image](https://github.com/NGI-TRUSTCHAIN/AURORA-MINDS/assets/39150377/e281409f-6ce5-4acd-944e-0dcb8580d5c3)
+![ΑΝΑΣΤΑΣΙΟΣ-ΜΑΝΟΣ](https://github.com/NGI-TRUSTCHAIN/AURORA-MINDS/assets/39150377/f5bc6bbf-b55e-44eb-92a7-6563899d0e8f)
 
 1. Anastasios Manos, CEO DOTSOFT, ICT background
 
-
-![image](https://github.com/NGI-TRUSTCHAIN/AURORA-MINDS/assets/39150377/764e73fc-0b48-466c-bf08-0f882c250f1b) 
+![image](https://github.com/NGI-TRUSTCHAIN/AURORA-MINDS/assets/39150377/612e64b5-e721-48c4-925a-ed131bb79050)
 
 2. Despina Elisabeth Filippidou, PMO/R&D DOTSOFT
 
 ![image](https://github.com/NGI-TRUSTCHAIN/AURORA-MINDS/assets/39150377/1185330b-2ae5-4a2b-b55a-35f0f70a55cf)
 
-3.Vasiliki Liagkou, Assistant Professor / Security & Privacy Senior ICT Manager
+3. Vasiliki Liagkou, Assistant Professor / Security & Privacy Senior ICT Manager
 
 ![image](https://github.com/NGI-TRUSTCHAIN/AURORA-MINDS/assets/39150377/9fe05038-3520-4a40-9d00-d210c8cd07b8)
 
