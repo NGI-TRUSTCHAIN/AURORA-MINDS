@@ -108,7 +108,6 @@ UoI is a large Higher Education Institution and a self-governing body supervised
 
 ### Entities
 #### Entity 1 name
-
 DOTSOFT SA is a dynamic, Greek SME Information Technology and Communications services provider, offering IT services to the public and private sector, in Greece and Europe. Customers include government institutions, multinational corporations, public administrations and multinational companies, research and academic institutes. DOTSOFT collaborates with the Laboratory of Knowledge & Intelligent Computing that covers the educational, teaching and research needs of the Department of Informatics and Telecommunications.
 #### Entity 2 name
 Laboratory of Knowledge & Intelligent Computing that covers the educational, teaching and research needs of the Department of Informatics and Telecommunications.
