@@ -40,6 +40,7 @@ In a potential demonstration scenario for Aurora Minds, a child with suspected A
 ### Repositories & Documentation
 https://github.com/ioannispanges/Cybersec4europe_IDM
 ## MORE DETAILS
+
 ## Customer Engagement
 1.  **User-Centric Design**: Soliciting feedback from parents, educators, and clinicians throughout the development process to ensure that the platform meets their needs and preferences.
     
@@ -76,6 +77,9 @@ In an extra scenario, a Municipality social care directive utilizes Aurora Minds
 ### Human Centric Approach
 The human-centric approach of Aurora Minds places the needs and experiences of children with ADHD at the forefront of its design and implementation. Recognizing the unique challenges and preferences of this demographic, the platform prioritizes usability, accessibility, and engagement. By tailoring the APSOU GAME and web application to the cognitive and behavioral profiles of children with ADHD, Aurora Minds ensures that the user experience is intuitive, engaging, and supportive. Moreover, the platform fosters collaboration and communication among parents, educators, clinicians, and other stakeholders, promoting a holistic and coordinated approach to ADHD diagnosis and management. Through continuous feedback and iterative design processes, Aurora Minds remains responsive to the evolving needs and preferences of its users, ultimately enhancing the quality of life for children with ADHD and their families.
 ## TEAM
+DOTSOFT is a fast-growing Greek/European SME providing Information and Communication Technologies (ICT) software development and integration services. Its main objective is to provide reliable, trustworthy, integrated ICT solutions in the areas of mobility, e-health, IoT technologies, e-transport, energy and sensor management systems, using technology innovation and successful project management to both public and private organizations.
+UoI is a large Higher Education Institution and a self-governing body supervised by the Ministry of Education. The Laboratory of Knowledge & Intelligent Computing (KIC-Lab), at the Department of Informatics & Telecommunications of the University of Ioannina is involved in various research areas, R&D activities and expertise are Implementation of cybersecurity, machine learning and data analysis.
+
 ### Contributors
  ![image](https://github.com/NGI-TRUSTCHAIN/AURORA-MINDS/assets/39150377/e281409f-6ce5-4acd-944e-0dcb8580d5c3)
 
