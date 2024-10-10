@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Create User Account</title>
+  <link th:href="@{/css/login1.css}" rel="stylesheet"/>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const userType = urlParams.get('userType');
+
+      if (userType) {
+        document.getElementById(userType).style.display = 'block';
+      }
+    });
+  </script>
+</head>
+<body>
+
+<div class="container">
+  <div class="inner_container">
+    <div class="img_container"></div>
+    <div class="box">
+      <div class="title_container">
+        <img src="/image/university.png" alt="University Image" class="image">
+      </div>
+      <div><label class="title">Details Account</label></div>
+
+      <!-- User Form -->
+      <div id="clinician" class="form-container">
+        <h3><span style="font-size: 15px; color: blue; font-family: 'Times New Roman';">Please insert the information of the user</span></h3>
+        <form th:action="@{/createUser}" method="post" th:object="${clinicianUserRequest}">
+          <div class="label_container">
+            <label class="label" for="firstName">First Name</label>
+          </div>
+          <input type="text" id="firstName" name="firstName" class="form-control" th:field="*{firstName}"/>
+          <div class="error_container">
+            <span class="error" th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></span>
+          </div>
+
+          <div class="label_container">
+            <label class="label" for="lastName">Last Name</label>
+          </div>
+          <input type="text" id="lastName" name="lastName" class="form-control" th:field="*{lastName}"/>
+          <div class="error_container">
+            <span class="error" th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></span>
+          </div>
+
+          <div class="label_container">
+            <label class="label" for="birthdate">Birth Date</label>
+          </div>
+          <input type="date" id="birthdate" name="birthdate" class="form-control" th:field="*{birthdate}"/>
+          <div class="error_container">
+            <span class="error" th:if="${#fields.hasErrors('birthdate')}" th:errors="*{birthdate}"></span>
+          </div>
+
+          <div class="label_container">
+            <label class="label" for="email">Email</label>
+          </div>
+          <input type="email" id="email" name="email" class="form-control" th:field="*{middle_name}"/>
+          <div class="error_container">
+            <span class="error" th:if="${#fields.hasErrors('middle_name')}" th:errors="*{middle_name}"></span>
+          </div>
+
+          <div class="label_container">
+            <label class="label" for="clinicianId">User ID</label>
+          </div>
+          <input type="text" id="clinicianId" name="clinicianId" class="form-control" th:field="*{nickname}"/>
+          <div class="error_container">
+            <span class="error" th:if="${#fields.hasErrors('nickname')}" th:errors="*{nickname}"></span>
+          </div>
+
+<!--          <div class="label_container">-->
+<!--            <label class="label" for="user_role">Role</label>-->
+<!--          </div>-->
+<!--          <input type="text" id="user_role" name="user_role" class="form-control" th:field="*{given_name}"/>-->
+<!--          <div class="error_container">-->
+<!--            <span class="error" th:if="${#fields.hasErrors('given_name')}" th:errors="*{given_name}"></span>-->
+<!--          </div>-->
+
+          <div class="label_container">
+            <label class="label" for="user_role">Role</label>
+          </div>
+          <select id="user_role" name="given_name" class="form-control" th:field="*{given_name}">
+            <option value="Clinician">Clinician</option>
+            <option value="Parent">Parent</option>
+          </select>
+          <div class="error_container">
+            <span class="error" th:if="${#fields.hasErrors('given_name')}" th:errors="*{given_name}"></span>
+          </div>
+
+          <h3><span style="font-size: 15px; color: darkred; font-family: 'Times New Roman';">Configuring Password</span></h3>
+
+          <div class="label_container">
+            <label class="label" for="username">Username</label>
+          </div>
+          <input type="text" id="username" name="username" class="form-control" th:field="*{username}"/>
+          <div class="error_container">
+            <span class="error" th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></span>
+          </div>
+
+          <div class="label_container">
+            <label class="label" for="password">Password</label>
+          </div>
+          <input type="password" id="password" name="password" class="form-control" autocomplete="off" th:field="*{password}"/>
+          <div class="error_container">
+            <span class="error" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></span>
+          </div>
+
+          <div class="label_container">
+            <label class="label" for="password_check">Confirm Password</label>
+          </div>
+          <input type="password" id="password_check" name="password_check" class="form-control" autocomplete="off" th:field="*{passwordCheck}"/>
+          <div class="error_container">
+            <span class="error" th:if="${#fields.hasErrors('passwordsEqual')}" th:errors="*{passwordsEqual}"></span>
+          </div>
+
+          <div class="button_container">
+            <input class="button" type="submit" value="Insert User in DB"/>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+<!--<script>-->
+<!--        function log()-->
+<!--        {-->
+<!--          console.log(user_role);-->
+
+<!--          const selectedRole = document.getElementById('user_role').value;-->
+<!--          console.log(selectedRole); // Logs only "Clinician" or "Parent"-->
+<!--        };-->
+<!--</script>-->

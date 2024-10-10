@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waiting for Clients</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            border: 2px solid #4CAF50;
+            border-radius: 15px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        .loader-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .loader {
+            border: 16px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 16px solid #4CAF50;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+            position: relative;
+        }
+        .loader-text {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #4CAF50;
+            top: 0;
+            left: 0;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .status {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+        .log {
+            margin-top: 20px;
+            text-align: left;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.3/socket.io.min.js"></script>
+    <script>
+        var socket = io();
+
+        socket.on('update_status', function(data) {
+            document.getElementById('status').innerText = `Received: ${data.received}/${data.total}`;
+            loadTableContents('local', 'localModelsTable');
+            loadTableContents('global', 'globalModelsTable');
+        });
+
+        socket.on('aggregation_complete', function() {
+            localStorage.setItem('showAlert', 'true');
+            window.location.href = '/';
+        });
+
+        function loadTableContents(folder, tableId) {
+            fetch(`/contents/${folder}`)
+                .then(response => response.json())
+                .then(data => {
+                    let table = document.getElementById(tableId);
+                    table.innerHTML = `<tr><th>Files</th></tr>`;
+                    data.files.forEach(file => {
+                        let row = table.insertRow();
+                        let cell = row.insertCell();
+                        cell.innerText = file;
+                    });
+                });
+        }
+
+        function resetServer() {
+            fetch('/reset', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => {
+                    alert('Server reset');
+                    localStorage.setItem('showAlert', 'true');
+                    window.location.href = '/';
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            loadTableContents('local', 'localModelsTable');
+            loadTableContents('global', 'globalModelsTable');
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Waiting for Clients</h1>
+        <div class="status" id="status">Received: 0/0</div>
+        <div class="loader-container">
+            <div class="loader"></div>
+        </div>
+        <h2>Local Models</h2>
+        <table id="localModelsTable"></table>
+        <h2>Global Models</h2>
+        <table id="globalModelsTable"></table>
+        <button onclick="resetServer()">Reset Server</button>
+    </div>
+</body>
+</html>

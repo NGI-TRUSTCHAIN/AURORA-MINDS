@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Login page</title>
+  <link th:href="@{/css/login1.css}" rel="stylesheet"/>
+</head>
+<body>
+
+<div class="inner_container">
+  <div class="img_container" th:style="'background:url(/image/line-resized.jpg)'"></div>
+  <div class="box">
+  <div>      <img src="/image/university.png"  width="250" height="160"/></div>
+    <div class="title_container">
+      <label class="title">Administrator Validation</label>
+    </div>
+
+
+    <br/>
+    <div class="form_container">
+
+      <h2>Admin Panel</h2>
+
+      <div class="error_container" th:if="${error}">
+        <div class="error">Invalid username or password</div>
+      </div>
+
+      <form th:action="@{/admin}" th:object="${adminValid}" method="post">
+        <div class="label_container">
+          <label class="label" for="username">Username</label>
+        </div>
+        <input type="text" id="username" name="username" class="form-control" th:field="*{name}" autofocus="autofocus" required/> <br/>
+        <div class="label_container">
+          <label class="label" for="password">Password</label>
+        </div>
+        <input type="password" id="password" name="password" class="form-control" th:field="*{password}" autofocus="autofocus" required/>
+        <br/>
+        <div class="button_container">
+          <input class="button" type="submit" value="Authorization"/>
+
+        </div>
+      </form>
+
+    </div>
+
+  </div>
+</div>
+</body>
+</html>

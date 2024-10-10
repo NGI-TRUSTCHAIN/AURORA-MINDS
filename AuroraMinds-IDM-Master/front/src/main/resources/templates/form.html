@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Manage your account</title>
+    <link th:href="@{/css/master.css}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="container">
+    <div class="inner_container">
+        <div class="img_container" th:style="'background:url(/image/line-resized.jpg)'"></div>
+        <div class="box">
+            <div class="title_container">
+                <img src="/image/university.png" width="250" height="160"/>
+                <h1>Application form for a certificate of studies</h1>
+                <script language="javascript">
+
+                </script>
+
+                <h5><span style="font-size: 15px; color: #CCCCCC; font-family: 'Times New Roman'; ">Ημερομηνία:</span>
+                    <label class="html-editor-align-justify" th:text="${applicationForm != null ? applicationForm.date : 'N/A'}"></label>
+                </h5>
+                <h5><span style="font-size: 15px; color: #CCCCCC; font-family: 'Times New Roman'; ">Αριθμός πρωτοκόλλου:</span>
+                    <label class="html-editor-align-justify" th:text="${applicationForm != null ? applicationForm.protocolid : 'N/A'}"></label>
+                </h5>
+                <h5><span style="font-size: 15px; color: #CCCCCC; font-family: 'Times New Roman'; ">Κωδικός αίτησης:</span>
+                    <label class="html-editor-align-justify" th:text="${applicationForm != null ? applicationForm.requestcode : 'N/A'}"></label>
+                </h5>
+                <h5><span style="font-size: 15px; color: #CCCCCC; font-family: 'Times New Roman'; ">Διεύθυνση:</span>
+                    <label class="html-editor-align-justify" th:text="${applicationForm != null ? applicationForm.address : 'N/A'}"></label>
+                </h5>
+                <h5><span style="font-size: 15px; color: #CCCCCC; font-family: 'Times New Roman'; ">Αριθμός Τηλεφώνου:</span>
+                    <label class="html-editor-align-justify" th:text="${applicationForm != null ? applicationForm.phonenumber : 'N/A'}"></label>
+                </h5>
+                <h5><span style="font-size: 15px; color: #CCCCCC; font-family: 'Times New Roman'; ">Fax:</span>
+                    <label class="html-editor-align-justify" th:text="${applicationForm != null ? applicationForm.fax : 'N/A'}"></label>
+                </h5>
+                <h5><span style="font-size: 15px; color: #CCCCCC; font-family: 'Times New Roman'; ">Διεύθυνση:</span>
+                    <label class="html-editor-align-justify" th:text="${applicationForm != null ? applicationForm.address : 'N/A'}"></label>
+                </h5>
+                <h5><span style="font-size: 15px; color: #CCCCCC; font-family: 'Times New Roman'; ">E-mail:</span>
+                    <label class="html-editor-align-justify" th:text="${applicationForm != null ? applicationForm.email : 'N/A'}"></label>
+                </h5>
+                <h5><span style="font-size: 15px; color: #CCCCCC; font-family: 'Times New Roman'; ">Πληροφορίες:</span>
+                    <label class="html-editor-align-justify" th:text="${applicationForm != null ? applicationForm.information : 'N/A'}"></label>
+                </h5>
+                <h5><span style="font-size: 15px; color: #CCCCCC; font-family: 'Times New Roman'; ">Εξάμηνο:</span>
+                    <label class="html-editor-align-justify" th:text="${applicationForm != null ? applicationForm.semester : 'N/A'}"></label>
+                </h5>
+                <h5><span style="font-size: 15px; color: #CCCCCC; font-family: 'Times New Roman'; ">Τύπος σπουδών:</span>
+                    <label class="html-editor-align-justify" th:text="${applicationForm != null ? applicationForm.modeofstudies : 'N/A'}"></label>
+                </h5>
+
+
+                <div class="button_container1">
+                    <a th:href="@{'http://localhost:8080/applicationform'}" class="button1">Review your Application</a>
+                    <div class="button_container2">
+                        <a th:href="@{'http://localhost:3000/verifypresentation'}" class="button2">Verify your Possessed Credential</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

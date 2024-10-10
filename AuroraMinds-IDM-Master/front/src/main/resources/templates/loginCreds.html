@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Login page</title>
+    <link th:href="@{/css/login1.css}" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        /* Additional CSS for styling the button */
+        .button_container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button_container button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button_container button:hover {
+            background-color: #45a049; /* Darker green */
+        }
+    </style>
+</head>
+<body>
+
+<div class="inner_container">
+    <div class="img_container"></div>
+    <div class="box">
+        <div class="image">
+            <img src="../image/university.png" alt="University Image" style="width: 180px; height: 100px;">
+        </div>
+        <div class="title_container">
+            <label class="title">Verification System</label>
+        </div>
+        <div class="button_container">
+            <button id="checkCredentialsButton">Check Credentials</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Function to get a specific cookie by name
+    function getCookie(name) {
+        let cookieArr = document.cookie.split(";");
+
+        for (let i = 0; i < cookieArr.length; i++) {
+            let cookiePair = cookieArr[i].split("=");
+
+            // Remove leading spaces and compare cookie name
+            if (name === cookiePair[0].trim()) {
+                return decodeURIComponent(cookiePair[1]);
+            }
+        }
+        return null;
+    }
+
+    // Function to check credentials
+    function checkCredentials() {
+        // Retrieve the userData cookie
+        let userDataCookie = getCookie('userData');
+
+        if (userDataCookie) {
+            // Print the raw cookie data to debug
+            console.log('Raw userDataCookie:', userDataCookie);
+
+            try {
+                // Parse the JSON data from the cookie
+                let userData = JSON.parse(userDataCookie);
+
+                //console.log(userData);
+
+                // Extract specific fields
+                let name = userData.name;
+                let nickname = userData.nickname;
+                let birthdate = userData.birthdate;
+                let middleName = userData.middle_name;
+                let role = userData.preferred_username;
+
+                // Print the extracted fields
+                //console.log('Name:', name);
+                //console.log('Nickname:', nickname);
+                //console.log('Birthdate:', birthdate);
+                //console.log('Middle Name:', middleName);
+
+                let flag = true;
+<!--                if (nickname == "1")-->
+<!--                {-->
+<!--                    flag = true;-->
+<!--                }-->
+                if (flag) {
+        // Use SweetAlert to display verification message
+        Swal.fire({
+            title: 'You are verified!',
+            text: 'Click okay to proceed to your page.',
+            icon: 'success',
+            showConfirmButton: true,
+            confirmButtonText: 'Okay'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = "http://localhost:3000/checkAccessCredential/already/credential/verifier";
+            }
+        });
+        } else {
+            // Use SweetAlert to display not verified message
+            Swal.fire({
+                title: 'Access Denied!',
+                text: 'You are not a clinician. Click okay to return to the homepage.',
+                icon: 'error',
+                showConfirmButton: true,
+                confirmButtonText: 'Okay'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = "http://localhost:3000/";
+                }
+            });
+        }
+
+            } catch (e) {
+                console.error('Error parsing JSON:', e);
+            }
+        } else {
+            Swal.fire({
+                title: 'No user data found!',
+                text: 'Please log in first.',
+                icon: 'error',
+                showConfirmButton: true,
+                confirmButtonText: 'Okay'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = "http://localhost:3000/";
+                }
+            });
+        }
+    }
+
+    // Add event listener to the button
+    document.getElementById('checkCredentialsButton').addEventListener('click', checkCredentials);
+</script>
+
+</body>
+</html>

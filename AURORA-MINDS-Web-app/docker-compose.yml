@@ -1,0 +1,77 @@
+services:
+
+  db:
+    image: postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+    ports:
+      - "5432:5432"
+    env_file:
+      - .env
+
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=${PGADMIN_DEFAULT_EMAIL}
+      - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_DEFAULT_PASSWORD}
+    ports:
+      - "5050:80"
+    depends_on:
+      - db
+
+  fastapi:
+    build:
+      context: ./aurora-minds-FastAPI
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    command: uvicorn api.main:app --host 0.0.0.0 --port 8080
+
+  django:
+    build:
+      context: ./aurora-minds-web-app/backend
+      dockerfile: Dockerfile
+    volumes:
+      - ./aurora-minds-web-app/backend:/code
+    ports:
+      - "8000:8000"
+    environment:
+      - SECRET_KEY=${SECRET_KEY}
+      - DB_NAME=${DB_NAME}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_HOST=${DB_HOST}
+      - DB_PORT=${DB_PORT}
+    depends_on:
+      - db
+    env_file:
+      - .env
+    command: python manage.py runserver 0.0.0.0:8000
+
+  frontend:
+    build:
+      context: ./aurora-minds-web-app/frontend
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    ports:
+      - "5173:5173"
+    depends_on:
+      - django
+      - fastapi
+    command: npm run dev -- --host
+
+networks:
+  default:
+    driver: bridge
+
+volumes:
+  postgres_data:

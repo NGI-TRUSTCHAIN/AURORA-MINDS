@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Federated Server</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            border: 2px solid #4CAF50;
+            border-radius: 15px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        .input-group {
+            margin: 15px 0;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="number"] {
+            padding: 10px;
+            width: 80px;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        img {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (localStorage.getItem('showAlert') === 'true') {
+                alert('Aggregation completed');
+                localStorage.setItem('showAlert', 'false');
+            } else if (localStorage.getItem('showResetAlert') === 'true') {
+                alert('Server reset');
+                localStorage.setItem('showResetAlert', 'false');
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <img src="/static/logo.png" alt="Logo">
+        <h1>Server is Up</h1>
+        <form action="/start_aggregation" method="post">
+            <div class="input-group">
+                <label for="num_clients">Provide the number of clients participating in this Federated Round:</label>
+                <input type="number" id="num_clients" name="num_clients" min="1" required>
+            </div>
+            <button type="submit">Start Aggregation</button>
+        </form>
+    </div>
+</body>
+</html>

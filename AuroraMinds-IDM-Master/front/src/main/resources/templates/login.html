@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Login page</title>
+    <link th:href="@{/css/login1.css}" rel="stylesheet"/>
+</head>
+<body>
+
+<script>
+
+    function setUsernameCookie() {
+        var username = document.getElementById('username').value;
+        document.cookie = 'username=' + encodeURIComponent(username) + '; path=/';
+    }
+</script>
+
+<div class="inner_container">
+    <div class="img_container"></div>
+    <div class="box">
+        <div class="image">
+            <img src="../image/university.png" alt="University Image" style="width: 180px; height: 100px;">
+        </div>
+        <div class="title_container">
+            <label class="title">Verification System</label>
+        </div>
+
+        <div class="success_container" th:if="${hasCreated}">
+            <label class="success">Your account was successfully created.</label>
+        </div>
+
+        <div class="success_container" th:if="${hasChangedPassword}">
+            <label class="success">Your password was successfully changed.</label>
+        </div>
+
+        <div class="success_container" th:if="${hasDeletedAccount}">
+            <label class="success">Your account was successfully deleted.</label>
+        </div>
+
+        <div class="error_container" th:if="${loginError}">
+            <label class="error">Login was unsuccessful.</label>
+        </div>
+
+        <div class="form_container">
+            <form th:action="@{/authenticate}" method="post" th:object="${loginRequest}" onsubmit="setUsernameCookie()">
+                <div class="label_container">
+                    <label class="label" for="username">Username</label>
+                </div>
+                <input type="text" id="username" name="username" class="form-control" autofocus="autofocus" th:field="*{username}"/>
+                <div class="label_container">
+                    <label class="label" for="password">Password</label>
+                </div>
+
+                <input type="password" id="password" name="password" class="form-control" th:field="*{password}"/>
+                <div class="button_container">
+                    <input class="button" type="submit" value="Login to your Clinician Account"/>
+                </div>
+            </form>
+            <a th:href="@{http://localhost:8080/admin}" class="sub_label">Aurora Minds Secretariat</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

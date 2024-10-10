@@ -1,0 +1,15 @@
+asgiref
+Django
+django-cors-headers
+djangorestframework
+djangorestframework-simplejwt
+PyJWT
+pytz
+sqlparse
+psycopg2-binary
+python-dotenv
+auto-dataclass
+factory_boy
+coverage
+inject~=5.2.1
+injector~=0.21.0
