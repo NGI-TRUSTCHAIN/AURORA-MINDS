@@ -1,65 +1,62 @@
 # AURORA-MINDS
-<h2>Introduction</h2>
-<p align="justify">AURORA MINDS represents a groundbreaking initiative, started from 15th of January 2024, aimed at addressing the need to early and accurately diagnose Attention Deficit Hyperactivity Disorder (ADHD) in children, aiming to improve the socio-economic landscape by enabling better education and support for children with ADHD, ultimately enhancing their life prospects, while prioritizing data privacy and security. In a landscape crowded with assistive technologies for ADHD, this project distinguishes itself by integrating robust privacy measures at its core. Existing ADHD assistive technologies often overlook privacy and security concerns, leaving users vulnerable to data risks and profiling. To counter these challenges, AURORA MINDS implements a multi-layered security framework, including Identity Management (IdM) and Privacy-Enhancing Technologies (PETs). This approach enhances data security, strictly controls access to sensitive information, and ensures compliance with data privacy regulations.</p>
 
-<p align="justify">The project leverages machine learning techniques such as federated learning and local differential privacy to protect sensitive user data during collection and analysis, aligning with GDPR requirements. Data will be pseudonymized and encrypted during storage and transfer. Consent mechanisms and access controls will be implemented to ensure data protection and privacy.</p>
- <h2>The project</h2>
-<p align="justify">AURORA MINDS adopts a human-centric design approach, tailoring personal data collection from a child while s/he interacts with a serious tablet animation game to cater a unique ADHD risk assessment process.
-The project benefits various stakeholders, including children, parents, educators, and clinicians.</p>
+## Overview
+AURORA MINDS is an innovative digital health platform designed to improve early and accurate diagnosis of Attention Deficit Hyperactivity Disorder (ADHD) in children while prioritizing data privacy and security. The project, launched on January 15, 2024, leverages advanced privacy-preserving technologies such as Federated Learning and self-sovereign identity management to ensure that sensitive health data is protected. AURORA MINDS provides a secure, decentralized solution for ADHD assessment, which can be extended to other mental health conditions, and offers a flexible architecture for scaling across multiple sectors beyond healthcare.
 
-- Children are examined through a specialized application supporting their behavioral unique requirements and independence. 
-- Parents receive reassurance regarding data confidentiality, gaining insights into ADHD risk assessment and relevant information to provide better support.
-- Clinicians benefit from enhanced diagnosis capabilities, aided by qualitative and quantitative measurements.
-- Collaboration with educational institutions to enhance support for children with ADHD. Schools can use the project's assessments to better understand students' needs and tailor educational plans accordingly.
+The system allows parents to register their child with ADHD by completing a questionnaire on behavior, education, and medical history. After registration, parents gain access to the Behavior Application, which collects behavioral data from children's interactions with ADHD-specific applications. This data is securely transferred to the Machine Learning Backend Server for analysis, with insights provided to clinicians via the Behavioral Party. Clinicians access relevant information for diagnosis and treatment planning. The server stores processed data securely, and users can request Attribute-Based Credentials for access. Access control is managed by the Behavioral Party, with tailored access for children, parents, and clinicians. An Application Portal offers information and links to system components, while a Virtual Identity Provider enables credential management and verification tokens issuance. The overall architecture of our system is illustrated below:
 
-<p align="justify">The system allows parents to register their child with ADHD by completing a questionnaire on behavior, education, and medical history. After registration, parents gain access to the Behavior Application, which collects behavioral data from children's interactions with ADHD-specific applications. This data is securely transferred to the Machine Learning Backend Server for analysis, with insights provided to clinicians via the Behavioral Party. Clinicians access relevant information for diagnosis and treatment planning. The server stores processed data securely, and users can request Attribute-Based Credentials for access. Access control is managed by the Behavioral Party, with tailored access for children, parents, and clinicians. An Application Portal offers information and links to system components, while a Virtual Identity Provider enables credential management and verification tokens issuance. The overall architecture of our system is illustrated below:</p>
+![image](https://github.com/NGI-TRUSTCHAIN/AURORA-MINDS/blob/main/figures/AURORA%20MINDS%20(1).png)
 
-![image](https://github.com/NGI-TRUSTCHAIN/AURORA-MINDS/assets/39150377/0845264d-862c-4d7f-83fb-676cb6c6c6ea)
+## Project Structure
 
+This repository integrates the three core components of the AURORA MINDS platform into a single cohesive project. The project is structured around the principles of microservices and each folder contains detailed instructions on how to set up the project.
 
-<p align="justify">Access rights are carefully managed using the Privacy-ABCs (Privacy-Attribute-Based Credentials) approach, ensuring that each entity—child, parent, and clinician—receives appropriate access privileges.
-By incorporating this proposal into the **TRUSTCHAIN** framework, **AURORA MINDS** elevates TRUSTCHAIN's reputation by exemplifying a steadfast commitment to data privacy and security. The emphasis on PETs and federated machine learning not only bolsters data privacy but also mitigates legal risks associated with data sharing, enhancing data quality for effective decision-making.</p>
+- **Federated Learning Module**: This module enables decentralized data processing to maintain data privacy during machine learning model training. The FL server is available [here](https://github.com/NGI-TRUSTCHAIN/AURORA-MINDS/tree/main/FedAurora-FL%20Server)
+- **Web App**: The web application supports clinician access, enabling them to review diagnostic data, manage reports, and engage with the assessment process. The web app also incorporates code for integrating other components. Available [here](https://github.com/NGI-TRUSTCHAIN/AURORA-MINDS/tree/main/AURORA-MINDS-Web-app).
+- **Identity Management and Privacy-ABCs**: This component handles credential issuance, verification, and self-sovereign identity management using Privacy-Attribute-Based Credentials (Privacy-ABCs), ensuring that users have complete control over their digital identity. There are two services needed for the IdM, the [Service Provider](https://github.com/NGI-TRUSTCHAIN/AURORA-MINDS/tree/main/AuroraMinds-Service-Provider-IDM) and the main [IdM Module](https://github.com/NGI-TRUSTCHAIN/AURORA-MINDS/tree/main/AuroraMinds-IDM-Master)
 
-<h2>More Details</h2>
-The main functionalities of the AURORA MINDS ecosystem include the following:
+## Key Features
 
-**Wallet  Application**
-- Credential Storage: Stores issued credentials securely.
-- Interactions: Facilitates interactions with the Behavioral Machine Learning Backend server.
-- Privacy-ABCs Management: Issues and verifies Privacy-Attribute-Based Credentials to users.
-- Compliance: Aligns with W3C-DID, W3C-VC standards, and European digital identity regulations.
-- Data Security: Ensures credentials are securely stored and transmitted.
+### Privacy-Preserving Federated Learning
+- **Decentralized Data Processing**: By keeping data local to user devices, federated learning minimizes the risk of data breaches, enhancing security and privacy.
+- **Model Aggregation**: Combines user-contributed data updates without requiring direct access to raw data, supporting secure machine learning for sensitive health assessments.
 
-**ADHD Diagnosis**
-- Credential Issuing: Serves as the primary issuer of credentials.
-- Parameter Storage: Stores system parameters in a public repository for accessibility.
-- Federated Learning: Decentralizes the personal data required for machine learning and establishes a connection for federated learning between the device and server
-- Privacy-ABCs: Supports the issuance of Privacy-Attribute-Based Credentials.
+### Self-Sovereign Identity and Access Control
+- **DID and VC Integration**: Employs W3C-compliant Decentralized Identifiers (DIDs) and Verifiable Credentials (VCs), enabling self-sovereign identity management where users maintain control over their identity.
+- **Privacy-ABCs**: Ensures that only authorized individuals (children, parents, clinicians) have access to sensitive data, and provides granular control over data sharing.
 
-**Databases**
-- Data Storage: Stores children's collected data in encrypted form.
-- Secure Recording: Utilizes Distributed Ledger Technologies (DLT) for secure and immutable record-keeping.
-![image](https://github.com/NGI-TRUSTCHAIN/AURORA-MINDS/assets/39150377/307b2d76-1d08-4aa0-a5eb-2ed1676f3498)
+### Secure ADHD Assessment Tools
+- **Interactive Game-Based Assessments**: The mobile app collects behavioral data through interactive games, facilitating ADHD risk assessment in a way that is engaging for children.
+- **Clinician Dashboard**: The web app allows clinicians to access detailed insights, including behavioral reports and AI-based analysis, to support ADHD diagnosis.
+- **Data Encryption and Compliance**: All data collected is encrypted and handled in compliance with GDPR, ensuring user privacy and regulatory adherence.
 
+## Getting Started
 
+To set up and run the AURORA MINDS platform, follow the steps below:
 
-
-
-
-
-<h1>Possible integration with OC1 projects</h1>
-
-- ConInSe, an innovative framework designed for privacy-centric data management. Built on Event-Driven Architecture (EDA) and Domain-Driven Design (DDD) principles provide to users a robust and scalable approach to managing consent in a distributed and asynchronous manner.
-- CreatorCredentials project is dedicated to developing a user-centric digital identity management framework.
-- DidRoom, an open-source multiplatform and multifunctional Identity DID/SSI wallet, compliant with the W3C-DID and W3C-VC standards and with the current “The European Digital Identity Wallet Architecture and Reference Framework” (EUDI – ARF, version 1.0.0 from January 2023) which is the technical core of the eIDAS 2.0 regulation.
+### Prerequisites
+- **Node.js** for the Web App front end.
+- **Python 3.8+** for the backend components.
+- **Docker** for containerized deployments.
+- **MongoDB** for data storage.
+- **React** for the mobile and web applications.
   
-<h1>Possible integration with OC2 projects</h1>
+### Installation
+Clone this repository and then refer to the folder of each specific module to set up.
+**Clone the Repository**:
+   ```bash
+   git clone https://github.com/NGI-TRUSTCHAIN/AURORA-MINDS.git
+   cd AURORA-MINDS```
 
-<div align="justify">- ProvenAI (Provenance in AI) could be integrating into our project enhancing data governance and privacy by ensuring traceability and accountability for every piece of information used within our system, aligning seamlessly with our commitment to ethical AI development and user empowerment.
-- GUEDHS (Data Governance and User privacy envisioning an EHDS pilot deployment) project focuses on securely sharing and reusing health data while respecting privacy and enforcing data control. Leveraging federated learning and cybersecurity tools, GUEDHS facilitates fast deployment of a Federated Network, enabling data custodians to manage permissions and monitor data usage for respiratory infections research.</div>
-<h1>Github</h1>
+### Integration with DIDROOM
+AURORA MINDS integrates with [DidRoom](https://didroom.com/), a self-sovereign identity (SSI) wallet, to facilitate secure and decentralized identity management for the mobile app. This allows users to manage their digital identity independently, aligning with the European Digital Identity (eIDAS 2.0) framework.
 
-The repositories can be found on the AURORA MINDS Github:https://github.com/orgs/NGI-TRUSTCHAIN/teams/aurora-minds
+### Future Directions
+AURORA MINDS will continue to expand, with planned features including:
+- **Additional Diagnostic Tools**: Support for assessing other mental health conditions, such as autism and learning disabilities.
+- **IoT Data Integration**: Support for data from wearables (e.g., smartwatches) and external sensors (e.g., cameras) to enhance assessment accuracy.
+
+
 <h1>Contact Information</h1>
 
 If you have any questions, please feel free to reach out:
@@ -69,5 +66,5 @@ If you have any questions, please feel free to reach out:
 <hr> 
 
 Aurora Minds Project has received funding from the Open Call #2 of TrustChain project: https://trustchain.ngi.eu/trustchain-open-call-2-results-funding-15-new-projects-to-build-the-next-generation-internet/ 
- 
+Special thanks to our partners and the open-source community for their support.
  
