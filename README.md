@@ -46,7 +46,8 @@ Clone this repository and then refer to the folder of each specific module to se
 **Clone the Repository**:
    ```bash
    git clone https://github.com/NGI-TRUSTCHAIN/AURORA-MINDS.git
-   cd AURORA-MINDS```
+   cd AURORA-MINDS
+```
 
 ### Integration with DIDROOM
 AURORA MINDS integrates with [DidRoom](https://didroom.com/), a self-sovereign identity (SSI) wallet, to facilitate secure and decentralized identity management for the mobile app. This allows users to manage their digital identity independently, aligning with the European Digital Identity (eIDAS 2.0) framework.
